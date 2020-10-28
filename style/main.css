@@ -32,6 +32,7 @@
     color: #DADADA;
     font-family: 'Trebuchet MS';
     font-size: 20px;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
 }
 
@@ -63,12 +64,12 @@
 
 .header-triangle {
     position: absolute;
-    margin-top: 46px;
-    margin-left: 74px;
+    margin-top: 45.5px;
+    margin-left: 76px;
     width: 0; 
     height: 0; 
     border-top: 8px solid transparent;
-    border-bottom: 7px solid transparent; 
+    border-bottom: 8px solid transparent; 
     border-right: 8px solid #00A4E5
 }
 
@@ -456,3 +457,4 @@
     overflow: hidden;
     outline: none;
 }
+
