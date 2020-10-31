@@ -18,8 +18,8 @@
 }
 
 .header-container {
-    width: 66.6%;
     margin: 0 auto;
+    width: 66.6%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,20 +28,21 @@
 }
 
 .header-logo {
+    display: block;
     margin-top: 42px;
-    color: #DADADA;
     font-family: 'Trebuchet MS';
     font-size: 20px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    color: #DADADA;
 }
 
 .header-title {
     padding-top: 319px;
     font-family: 'Open Sans';
-    color: #DADADA;
-    font-size: 50px;
+    font-size: 8vh;
     text-transform: uppercase;
+    color: #DADADA;
 }
 
 .header-subtitle {
@@ -75,9 +76,38 @@
 
 /* Navigation settings ================ */
 
+.navigation {
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #e2e2e2;
+}
+
+.navigation-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation-logo {
+    padding: .7em 0;
+    font-size: calc(20px + 1vw);
+    color: #333333;
+}
+
+.navigation-link {
+    margin-left: 2em;
+    text-decoration: none;  
+    color: #333333;
+}
+
+.navigation-link:hover {
+    transform: scale(1.2);
+    color: #555555;
+}
+
 .navigation-line {
     border-bottom: 2px solid #E6E6E6;
-    
 }
 
 .nav-container {
@@ -85,50 +115,81 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
-    
 }
 
-.navmenu {
+.navigation-nav {
+    display: flex;
     margin-top: 25px;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
     line-height: 16px;
+    text-transform: uppercase;
 }
 
-.navmenu :hover {
+.navigation-nav :hover {
     color: #00A4E5;
 }
 
-.navmenu li {
-    display: inline;
-    margin: 2px;
-}
-
-.navmenu a {
-    text-decoration: none;
-    color: #48555B;
-}
-
-.navigation-title {
-    margin-top: 25px;
+.navigation-logo {
+    margin-top: 47px;
     margin-bottom: 25px;
-    color:#1e292e;
     font-family: 'Trebuchet MS';
-    font-size: 15px;
+    font-size: 16px;
     text-transform: uppercase;
+    color: #1e292e;
 }
 
 .navigation-triangle {
     position: absolute;
-    margin-top: 2px;
+    margin-top: 3px;
     margin-left: 0.5px;
     width: 0; 
     height: 0; 
     border-top: 7px solid transparent;
-    border-bottom: 6px solid transparent; 
+    border-bottom: 7px solid transparent; 
     border-right: 7px solid #00A4E5;
+}
+
+/*  Burger =======
+======================================*/
+
+.menu-btn {
+    position: fixed;
+    z-index: 1;
+    display: none;
+    top: calc(50% - 14px);
+    right: 10px;
+    width: 30px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.menu-btn-burger {
+    position: fixed;
+    top: 20px;
+    height: 3px;
+    width: 30px;
+    background-color: #000000;
+}
+
+.menu-btn-burger:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    height: 3px;
+    width: 30px;
+    background-color: #000000;
+}
+
+.menu-btn-burger:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    height: 3px;
+    width: 30px;
+    background-color: #000000;
 }
 
 /* About settings ================ */
@@ -167,7 +228,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    
 }
 
 .about-subtitle {
@@ -194,27 +254,29 @@
 
 .plan {
     background: url(../img/image-plan.png) center;
-    width: 110px;
-    height: 160px;
-    background-size: cover;
     padding-left: 10px;
+    margin: 5px 1px;
+    width: 140px;
+    height: 180px;
+    background-size: cover;
 }
 
 .manage {
     background: url(../img/image-manage.png) center;
-    width: 110px;
-    height: 160px;
-    background-size: cover;
     padding-left: 10px;
-
+    margin: 5px 1px;
+    width: 140px;
+    height: 180px;
+    background-size: cover;
 }
 
 .build {
     background: url(../img/image-build.png) center;
-    width: 110px;
-    height: 160px;
-    background-size: cover;
     padding-left: 10px;
+    margin: 5px 1px;
+    width: 140px;
+    height: 180px;
+    background-size: cover;
 }
 
 .weplan {
@@ -222,8 +284,8 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 800;
-    color: #FFFFFF;
     text-transform: uppercase;
+    color: #FFFFFF;
 }
 
 .wemanage {
@@ -231,8 +293,8 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 800;
-    color: #FFFFFF;
     text-transform: uppercase;
+    color: #FFFFFF;
 }
 
 .webuild {
@@ -240,8 +302,8 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 800;
-    color: #FFFFFF;
     text-transform: uppercase;
+    color: #FFFFFF;
 }
 
 /* About settings ================ */
@@ -256,7 +318,7 @@
 }
 
 .serv-title {
-    margin-bottom: 10px;
+    margin-top: 10px;
     font-family: 'Open Sans 700';
     font-style: normal;
     font-weight: bold;
@@ -268,13 +330,12 @@
 
 .serv-line {
     width: 50px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    margin-left: 60px;
+    margin: 10px 60px 0;
     border-bottom: 2px solid #00A4E5;
 }
 
 .serv-text {
+    margin: 10px 8px;
     font-family: 'Open Sans 400';
     font-style: normal;
     font-weight: normal;
@@ -284,18 +345,19 @@
 }
 
 .serv-form-button {
-    width: 150px;
+    margin-top: 10px;
+    width: 140px;
     height: 31px;
     line-height: 18px;
     font-family: 'Open Sans 700';
     font-style: normal;
     font-weight: bold;
-    color: #FFFFFF;
-    background-color: #00A4E5;
     border: none;
     cursor: pointer;
     overflow: hidden;
     outline: none;
+    color: #FFFFFF;
+    background-color: #00A4E5;
 }
 
 .services-body {
@@ -308,17 +370,19 @@
 
 .project-box {
     width: 280px;
+    margin: 10px 3px;
     border: 2px solid #E6E6E6;
 }
 
 .structure-box {
     width: 280px;
-    margin: 0px 0px;
+    margin: 10px 3px;
     border: 2px solid #E6E6E6;
 }
 
 .factory-box {
     width: 280px;
+    margin: 10px 3px;
     border: 2px solid #E6E6E6;
 }
 .project-image {
@@ -370,8 +434,8 @@
     font-weight: bold;
     font-size: 13px;
     line-height: 24px;
-    color: #48555B;
     text-transform: uppercase;
+    color: #48555B;
 }
 
 .factory-title {
@@ -383,8 +447,8 @@
     font-weight: bold;
     font-size: 13px;
     line-height: 24px;
-    color: #48555B;
     text-transform: uppercase;
+    color: #48555B;
 }
 
 .project-text {
@@ -455,12 +519,12 @@
     font-family: 'Open Sans 700';
     font-style: normal;
     font-weight: bold;
-    color: #FFFFFF;
-    background-color: #00A4E5;
     border: none;
     cursor: pointer;
     overflow: hidden;
     outline: none;
+    color: #FFFFFF;
+    background-color: #00A4E5;
 }
 
 /* Newsletter settings ================ */
@@ -489,12 +553,12 @@
 }
 
 .newsletter-form {
-    margin: 19px 80px 15px; 
+    margin: 18px 80px 15px; 
 }
 
 .newsletter-input {
     width: 180px;
-    height: 30px;
+    height: 29px;
     border: none;
 }
 
@@ -504,10 +568,10 @@
     font-family: 'Open Sans 700';
     font-style: normal;
     font-weight: bold;
-    color: #FFFFFF;
-    background-color: #00A4E5;
     text-transform: uppercase;
     border: none;
+    color: #FFFFFF;
+    background-color: #00A4E5;
 }
 
 /* Footer settings ================ */
@@ -541,11 +605,11 @@
 }
 
 .footer-logo {
-    color: #DADADA;
     font-family: 'Trebuchet MS';
     font-size: 20px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    color: #DADADA;
 }
 
 .footer-triangle {
@@ -569,10 +633,11 @@
 }
 
 .fa {
+    margin: 8px 0;
     text-decoration: none;
     color: #FFFFFF;
-    margin: 8px 0;
 }
+
 .footer-links {
     margin: 32px 0 40px;
     height: 150px;
@@ -581,7 +646,7 @@
     justify-content: space-between;
     font-family: 'Open Sans 600';
     font-style: normal;
-    font-size: 15px;
+    font-size: 14px;
     list-style: none;
     text-transform: uppercase;
 }
@@ -595,10 +660,9 @@
     list-style: none;
     font-family: 'Open Sans 600';
     font-style: normal;
-    font-size: 15px;
+    font-size: 14px;
     list-style: none;
     text-transform: uppercase;
-    
 }
 
 .footer-blog {
@@ -610,7 +674,7 @@
     list-style: none;
     font-family: 'Open Sans 600';
     font-style: normal;
-    font-size: 15px;
+    font-size: 14px;
     list-style: none;
     text-transform: uppercase;
 }
@@ -623,7 +687,7 @@
     list-style: none;
     font-family: 'Open Sans 400';
     font-style: normal;
-    font-size: 13px;
+    font-size: 12px;
     list-style: none;
 }
 
@@ -658,3 +722,5 @@
 .lower-footer-text {
     margin: 15px 0 15px;
 }
+
+/* ================================= */
