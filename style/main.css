@@ -66,7 +66,7 @@
 .header-triangle {
     position: absolute;
     margin-top: 3.5px;
-    margin-left: 2px;
+    margin-left: -8px;
     width: 0; 
     height: 0; 
     border-top: 8px solid transparent;
@@ -144,11 +144,11 @@
 .navigation-triangle {
     position: absolute;
     margin-top: 3px;
-    margin-left: 0.5px;
+    margin-left: -4px;
     width: 0; 
     height: 0; 
     border-top: 7px solid transparent;
-    border-bottom: 7px solid transparent; 
+    border-bottom: 6px solid transparent; 
     border-right: 7px solid #00A4E5;
 }
 
@@ -385,6 +385,7 @@
     margin: 10px 3px;
     border: 2px solid #E6E6E6;
 }
+
 .project-image {
     background: url(../img/img-project.png) center;
     margin-top: 28px;
@@ -615,11 +616,11 @@
 .footer-triangle {
     position: absolute;
     margin-top: 4px;
-    margin-left: 2px;
+    margin-left: -4px;
     width: 0; 
     height: 0; 
     border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent; 
+    border-bottom: 7px solid transparent; 
     border-right: 8px solid #00A4E5
 }
 
